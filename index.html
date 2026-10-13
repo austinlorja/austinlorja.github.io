@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
 
-    <title>Your personal website</title>
+    <title>Austin Lorja</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -136,10 +136,10 @@
               Our program follows the idea of the Birthday Paradox by creating groups of people and generating a random birthday for each person to check if there are any matching birthdays. The program repeats this process several times for different group sizes and calculates the number of times a matching birthday is found.
               </p>
               <p>
-              Project design
+              We designed our program by splitting it into four major classes and a Month enum, each with its own focus and job to do. The Birthday class represents a single person's random birthday, with a valid month and day. The Month enum organizes and stores the months of the year and the number of days in each month, which keeps invalid dates out. The Trial class represents one group of people and creates a Birthday for every person in the group and checks if any two people share the same birthday. The Experiment class runs a set number of trials for a specific group size. It then counts and determines how often matching birthdays occur. Finally, the Simulator class ties it all together by running experiments for various group sizes and displaying the results. We ensured that breaking the program into separate classes would make it easier to understand, organize, and test all components of the program efficiently and successfully following clean code principles.
               </p>
               <p>
-              Implementation
+              Tasks were split up between my partner and I to keep our responsibilities fair. Particularly, one of my tasks was to develop the Birthday class and make sure it created and represented individual birthdays used in the simulation. I also created the Month enum during the process of refactoring to help ensure that each component had a clear responsibility. Additionally, I set up the Experiment class and its constructor to initialize its group size and number of trials. I also added the Simulator class to run experiments and have the results displayed. Throughout developing the program, I focused on writing organized code and improving variable names and complicated methods using SOLID components and other clean code principles. During the testing phase, I was responsible for writing unit tests for the Birthday class and a portion of the Experiment class. I put time into thinking about different possible outcomes that needed to be tested on to ensure the code was robust and flexible. My partner and I collaborated using GitHub, where we reviewed each other's contributions and overall manage our changes through requests. Overall, all these practices gave me hands-on experience and helped me understand the importance of programming in a reliable and maintainable manner.
               </p>
 
 
