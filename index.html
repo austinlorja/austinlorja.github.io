@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
 
-    <title>Your personal website</title>
+    <title>Austin Lorja</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -56,7 +56,7 @@
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="#" class="h2 mb-0">Your Name</a></h1>
+            <h1 class="mb-0 site-logo"><a href="#" class="h2 mb-0">Austin Lorja</a></h1>
           </div>
 
           <div class="col-12 col-md-10 d-none d-xl-block">
@@ -86,19 +86,19 @@
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
 
-            <img src="" alt="Image of you of something fun" class="img-fluid">
+            <img src="images/profile.png" alt="Image of you of something fun" class="img-fluid">
 
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
               <p>
-               My name is Austin Lorja. I am a student at the University of San Diego majoring in Computer Science. I was born in San Diego and have lived there my whole life.
+               My name is Austin Lorja. I am a student at the University of San Diego majoring in Computer Science. I was born in San Diego and have lived there my whole life along with my siblings, but my parents are from a small city in Albania called Shkodër.
               </p>
               <p>
-                Professional info
+                As a Computer Science student, I am continuing to study and explore several programming languages, including Python, Java, C, and SQL. Through my coursework alongside practicing these languages, I have gained knowledge in artificial intelligence and data science, topics I am particularly interested in. I have generally enjoyed learning patterns, making prediction, and applying these skills into solving real-world problems, so these are the kinds of topics I hope to pursue in my future career.
                </p>
                <p>
-                In my free time, I like to hike, visit the beaches, and spend time with family and friends. I
+                In my free time, I enjoy traveling, hiking, visiting the beaches, and spending time with family and friends. My favorite place I have been to is Lake Tahoe as it's a beautiful small town in the countryside with the clearest water and most delicious food.
                </p>
 
 
@@ -123,23 +123,23 @@
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
           
-            <img src="" alt="Image of your project" class="img-fluid">
+            <img src="images/birthday-results.png" alt="Image of your project" class="img-fluid">
           
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
-              <h3>Project Title</h3>
+              <h3>Birthday Paradox Simulation</h3>
               <p>
-               Motivation of the project
+               The Birthday Paradox is a phenomenon that tests how likely two people in a room share a birthday. In fact, in a group of just 23 people, the odds of two of them sharing a birthday is more than approximately 50%, which is is a lot higher than most people think. For this project, we developed a Java program to test this idea and observe how the probability of shared birthdays varies with the number of people in the group.
               </p>
               <p>
-              Functional requirements/what the project does
+              Our program follows the idea of the Birthday Paradox by creating groups of people and generating a random birthday for each person to check if there are any matching birthdays. The program repeats this process several times for different group sizes and calculates the number of times a matching birthday is found.
               </p>
               <p>
-              Project design
+              We designed our program by splitting it into four major classes and a Month enum, each with its own focus and job to do. The Birthday class represents a single person's random birthday, with a valid month and day. The Month enum organizes and stores the months of the year and the number of days in each month, which keeps invalid dates out. The Trial class represents one group of people and creates a Birthday for every person in the group and checks if any two people share the same birthday. The Experiment class runs a set number of trials for a specific group size. It then counts and determines how often matching birthdays occur. Finally, the Simulator class ties it all together by running experiments for various group sizes and displaying the results. We ensured that breaking the program into separate classes would make it easier to understand, organize, and test all components of the program efficiently and successfully following clean code principles.
               </p>
               <p>
-              Implementation
+              Tasks were split up between my partner and I to keep our responsibilities fair. Particularly, one of my tasks was to develop the Birthday class and make sure it created and represented individual birthdays used in the simulation. I also created the Month enum during the process of refactoring to help ensure that each component had a clear responsibility. Additionally, I set up the Experiment class and its constructor to initialize its group size and number of trials. I also added the Simulator class to run experiments and have the results displayed. Throughout developing the program, I focused on writing organized code and improving variable names and complicated methods using SOLID components and other clean code principles. During the testing phase, I was responsible for writing unit tests for the Birthday class and a portion of the Experiment class. I put time into thinking about different possible outcomes that needed to be tested on to ensure the code was robust and flexible. My partner and I collaborated using GitHub, where we reviewed each other's contributions and overall manage our changes through requests. Overall, all these practices gave me hands-on experience and helped me understand the importance of programming in a reliable and maintainable manner.
               </p>
 
 
@@ -153,6 +153,48 @@
       
 
     </section>
+
+    <section class="site-section border-bottom">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 mb-5" data-aos="fade-up">
+            <img src="images/ElevatorProjectDesign.png"
+                 alt="Elevator Simulator UML Diagram"
+                 class="img-fluid">
+          </div>
+
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3>Elevator Simulator</h3>
+
+              <p>
+                The Elevator Simulator project is a Java program that mimics the working of elevators in a building and responds to requests from passengers. The project demonstrates how different types of elevators answer calls and more importantly how the scheduling of elevators impact how quickly passengers are picked up.
+              </p>
+
+              <p>
+                The program simulates a building with four elevators, each having its own unique rules about what floors it can go to and what requests it can accept. Passengers can call an elevator from floor to floor, and the program uses a scheduler to figure out which elevator should be assigned to a request. We designed two scheduling strategies: a simple scheduler that assigns requests to the first free (eligible) elevator, and a complex scheduler that considers the elevator’s distance and direction and chooses which one can reach the passenger in the least number of rounds.
+              </p>
+
+              <p>
+                We divided the program into different classes to make it easier to understand and maintain. The Call class represents a passenger’s request. The abstract Elevator class has shared functionality for its four subclasses through inheritance. Both SimpleScheduler and ComplexScheduler classes implement the Scheduler interface and work with the elevators to assign requests. The Simulator class connects all these components and runs the simulation. We designed this program using the four pillars of object-oriented programming and SOLID principles to give each class a clear responsibility.
+              </p>
+
+              <p>
+                My main responsibilities were implementing the Call class, both SimpleScheduler and ComplexScheduler classes, and the Simulator class, along with their unit tests. I followed test-driven development and wrote tests before implementing each feature and refactoring the code when needed. My partner and I used GitHub as a way to communicate and work, including branches and pull requests to review each other’s work and keep our changes organized.
+              </p>
+
+              <p>
+                This project helped me to better understand how different classes work together through inheritance and interfaces. It also gave me a substantial amount of experience with unit testing, test-driven development, writing clean code, and communicating with a teammate on a larger, demanding project.
+              </p>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
 
 
     <section class="site-section" id="contact-section" data-aos="fade">
